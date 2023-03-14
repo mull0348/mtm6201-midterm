@@ -1,0 +1,261 @@
+/* INITIALIZE */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+/* FONT */
+/* ==> handle all the font and responsiveness of the font */
+
+h1{
+    font-family: 'EB Garamond', serif;
+    font-size: calc(40px + (100 - 40) * ((100vw - 300px) / (1600 - 300)));
+}
+h2{
+    font-family: 'EB Garamond', serif;
+    font-size: calc(25px + (50 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 200;
+}
+h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(12px + (25 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 300;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 200;
+}
+
+.container{
+    width: 100%;
+    padding: 5rem 8rem;
+}
+
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+ul{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    margin: 0 1rem;
+    transition: all .2s ease-in-out;
+}
+li a{
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+.navbar li:hover{
+    transform: scale(1.3);
+}
+
+/* HERO */
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    background-image: url("images/modern\ furniture.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.title{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: #1F2024;
+    width: 60%;
+}
+.title h3{
+    margin-top: 10px;
+}
+
+/* VIDEOS */
+.video{
+    margin-bottom: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.video p{
+    width: 40%;
+}
+.iframe-vid{
+    aspect-ratio: 16 / 9;
+    width: 55%;
+}
+.small{
+    display: none;
+}
+
+/* FOOTER */
+.footer{
+    background: #1F2024;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 3rem 8rem;
+}
+.footer span{
+    width: 30%;
+}
+.slogan{
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+.footer li{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.footer a{
+    color: #fff;
+}
+.footer li img{
+    margin-right: 10px;
+}
+.footer ul{
+    flex-direction: column;
+}
+.related{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title-page{
+    width: 100%;
+    height: 40vh;
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us{
+    display: flex;
+}
+.about{
+    width: 50%;
+}
+.about img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.about h2{
+    margin-top: 2rem;
+}
+.about p{
+    margin-top:1rem;
+}
+
+.contact-us{
+    display: flex;
+    justify-content: space-around;
+}
+.contact-us ul{
+    display: flex;
+    flex-direction: column;
+}
+.contact-us li{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+.contact-us li img{
+    margin-right: 1rem;
+}
+
+/* MEDIA QUERIES */
+/* ==> handling responsivness of website  */
+
+/* this styling below will work when screen <= 600px width */
+@media only screen and (max-width: 600px) {
+    .container{
+        padding: 2rem;
+    }
+    .footer{
+        padding: 2rem;
+    }
+    .title{
+        width: 70%;
+        padding: 1rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer span{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .hero{
+        background-position: left bottom;
+    }
+}
+
+/* this styling below will work when screen <= 400px width */
+@media only screen and (max-width: 400px) {
+    .video{
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .video p{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .iframe-vid{
+        width: 100%;
+    }
+    .small{
+        display: block;
+    }
+    .big{
+        display: none;
+    }
+    .navbar{
+        padding: 1rem;
+    }
+    .navbar img{
+        width: 40px;
+        height: 40px;
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    .about{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .contact-us{
+        flex-direction: column;
+    }
+}
